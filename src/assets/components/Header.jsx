@@ -5,6 +5,7 @@ export default function Header() {
         <a href="#">
           <img src="/dc-logo.png" alt="Logo" />
         </a>
+        {/* header nav */}
         <ul className="d-flex align-items-center gap-4 mb-0">
           <li>
             <a href="#">CHARACTERS</a>

@@ -1,7 +1,6 @@
 /* Resets */
 body {
   background-color: #0e0e0e;
-  padding: 0.7rem 0 0.7rem 0;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -100,7 +99,7 @@ main {
 }
 
 main > .jumbo-section {
-  height: 40vh;
+  height: 45vh;
   overflow: hidden;
 }
 
@@ -122,33 +121,55 @@ main > .jumbo-section {
   border-radius: 0;
 }
 
+.comics-section .comic-title {
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.comics-section .col-2:first-child img {
+  scale: 1.5;
+  translate: 0 25%;
+}
+
+.comics-section .col-2:last-child img {
+  scale: 1.6;
+  translate: 0 25%;
+}
+
 /* Footer */
 /* footer-nav */
 .footer-nav {
   background-color: #0282f9;
   position: relative;
   z-index: 2;
-  padding: 2.2rem 0 2.2rem 0;
 }
 
 .footer-nav a {
   display: flex;
-  gap: 0.8rem;
+  justify-content: center;
   align-items: center;
+  gap: 0.6rem;
   font-size: 0.7rem;
 }
 
 .footer-nav img {
   height: 45px;
-  max-width: 45px;
+  width: 45px;
+  object-fit: contain;
+}
+
+.footer-nav col {
+  display: flex;
+  align-items: center;
 }
 
 /* footer-links */
 .footer-links {
   background-image: url("src/assets/img/footer-bg.jpg");
   background-size: cover;
-  position: relative;
   padding: 2rem 0 3rem 0;
+  position: relative;
 }
 
 .footer-links h6 {
@@ -164,17 +185,17 @@ main > .jumbo-section {
 
 .footer-links .background-logo {
   position: absolute;
-  top: -130px;
-  right: 180px;
-  scale: 0.8;
+  top: -24%;
+  right: 13%;
+  max-width: 420px;
   z-index: 1;
 }
 
 /* social-section */
 .social-section {
   background-color: #303030;
-  position: relative;
   z-index: 2;
+  position: relative;
 }
 
 .social-section .btn {

@@ -180,15 +180,18 @@ export default function Main() {
       <div className="jumbo-section">
         <img src="src/assets/img/jumbotron.jpg" alt="Jumbotron" />
       </div>
+      {/* comics section */}
       <section className="container-custom comics-section">
-        <h2 className="h5 d-inline-block py-2 px-3 fw-bolder">CURRENT SERIES</h2>
-        <div className="row mx-1">
+        <h2 className="h5 d-inline-block py-2 px-4 fw-bolder">CURRENT SERIES</h2>
+        <div className="row gy-4 mx-1 mb-3">
           {comics.map((comic) => (
             <div key={comic.id} className="col-2">
-              <div className="img-container">
-                <img className="img-fluid" src={comic.thumb} alt={comic.title} />
-              </div>
-              <div className="comic-title">{comic.series}</div>
+              <a href="#">
+                <div className="img-container">
+                  <img className="img-fluid" src={comic.thumb} alt={comic.title} />
+                </div>
+                <div className="comic-title">{comic.series}</div>
+              </a>
             </div>
           ))}
         </div>

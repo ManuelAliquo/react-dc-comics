@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer className="page-footer text-white">
       <Topfooterband />
+      {/* links section */}
       <section className="footer-links">
         <div className="container-custom d-flex gap-4">
           <div className="list-container ">
@@ -99,9 +100,14 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <img className="background-logo" src="/dc-logo-bg.png" alt="Background Logo" />
+          <img
+            className="background-logo img-fluid"
+            src="public/dc-logo-bg.png"
+            alt="Background Logo"
+          />
         </div>
       </section>
+      {/* social section */}
       <div className="social-section py-4">
         <div className="container-custom d-flex justify-content-between">
           <a className="btn text-white" href="#">
