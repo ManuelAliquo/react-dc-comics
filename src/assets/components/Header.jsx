@@ -3,7 +3,7 @@ export default function Header() {
     <header className="page-header">
       <div className="container-custom d-flex justify-content-between h-100">
         <a href="#">
-          <img src="src/assets/img/dc-logo.png" alt="Logo" />
+          <img src="/dc-logo.png" alt="Logo" />
         </a>
         <ul className="d-flex align-items-center gap-4 mb-0">
           <li>

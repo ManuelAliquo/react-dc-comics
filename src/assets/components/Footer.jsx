@@ -1,6 +1,9 @@
+import Topfooterband from "./Topfooterband.jsx";
+
 export default function Footer() {
   return (
     <footer className="page-footer text-white">
+      <Topfooterband />
       <section className="footer-links">
         <div className="container-custom d-flex gap-4">
           <div className="list-container ">
@@ -96,14 +99,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <img
-            className="background-logo"
-            src="src/assets/img/dc-logo-bg.png"
-            alt="Background Logo"
-          />
+          <img className="background-logo" src="/dc-logo-bg.png" alt="Background Logo" />
         </div>
       </section>
-      <section className="social-section py-4">
+      <div className="social-section py-4">
         <div className="container-custom d-flex justify-content-between">
           <a className="btn text-white" href="#">
             SIGN-UP NOW!
@@ -111,23 +110,23 @@ export default function Footer() {
           <div className="d-flex align-items-center gap-3">
             <span>FOLLOW US</span>
             <a href="#">
-              <img src="src\assets\img\footer-facebook.png" alt="Facebook" />
+              <img src="src/assets/img/footer-facebook.png" alt="Facebook" />
             </a>
             <a href="#">
-              <img src="src\assets\img\footer-twitter.png" alt="Twitter" />
+              <img src="src/assets/img/footer-twitter.png" alt="Twitter" />
             </a>
             <a href="#">
-              <img src="src\assets\img\footer-youtube.png" alt="YouTube" />
+              <img src="src/assets/img/footer-youtube.png" alt="YouTube" />
             </a>
             <a href="#">
-              <img src="src\assets\img\footer-pinterest.png" alt="Pinterest" />
+              <img src="src/assets/img/footer-pinterest.png" alt="Pinterest" />
             </a>
             <a href="#">
-              <img src="src\assets\img\footer-periscope.png" alt="Periscope" />
+              <img src="src/assets/img/footer-periscope.png" alt="Periscope" />
             </a>
           </div>
         </div>
-      </section>
+      </div>
     </footer>
   );
 }
