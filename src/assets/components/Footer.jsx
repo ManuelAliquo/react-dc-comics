@@ -1,105 +1,127 @@
-import Topfooterband from "./Topfooterband.jsx";
+const footerDCComicsMenu = [
+  {
+    title: "DC COMICS",
+    links: [
+      { text: "Characters", url: "#" },
+      { text: "Comics", url: "#" },
+      { text: "Movies", url: "#" },
+      { text: "TV", url: "#" },
+      { text: "Games", url: "#" },
+      { text: "Videos", url: "#" },
+      { text: "News", url: "#" },
+    ],
+  },
+];
+const footerShopMenu = [
+  {
+    title: "SHOP",
+    links: [
+      { text: "Shop DC", url: "#" },
+      { text: "Shop DC Collectibles", url: "#" },
+    ],
+  },
+];
+const footerDCMenu = [
+  {
+    title: "DC",
+    links: [
+      { text: "Terms Of Use", url: "#" },
+      { text: "Privacy policy (New)", url: "#" },
+      { text: "Ad Choices", url: "#" },
+      { text: "Advertising", url: "#" },
+      { text: "Jobs", url: "#" },
+      { text: "Subscriptions", url: "#" },
+      { text: "Talent Workshops", url: "#" },
+      { text: "CPSC Certificates", url: "#" },
+      { text: "Ratings", url: "#" },
+      { text: "Shop Help", url: "#" },
+      { text: "Contact Us", url: "#" },
+    ],
+  },
+];
+const footerSitesMenu = [
+  {
+    title: "SITES",
+    links: [
+      { text: "DC", url: "#" },
+      { text: "MAD Magazine", url: "#" },
+      { text: "DC Kids", url: "#" },
+      { text: "DC Universe", url: "#" },
+      { text: "DC Power Visa", url: "#" },
+    ],
+  },
+];
+
+footerSitesMenu.map((item) => {
+  console.log(item.title);
+  item.links.map((link) => {
+    console.log(link.text);
+  });
+});
+
+import Footernav from "./Footernav.jsx";
 
 export default function Footer() {
   return (
     <footer className="page-footer text-white">
-      <Topfooterband />
+      <Footernav />
       {/* links section */}
       <section className="footer-links">
         <div className="container-custom d-flex gap-4">
-          <div className="list-container ">
-            <h6>DC COMICS</h6>
-            <ul>
-              <li>
-                <a href="#">Characters</a>
-              </li>
-              <li>
-                <a href="#">Comics</a>
-              </li>
-              <li>
-                <a href="#">Movies</a>
-              </li>
-              <li>
-                <a href="#">TV</a>
-              </li>
-              <li>
-                <a href="#">Games</a>
-              </li>
-              <li>
-                <a href="#">Videos</a>
-              </li>
-              <li>
-                <a href="#">News</a>
-              </li>
-            </ul>
-            <h6 className="mt-3">SHOP</h6>
-            <ul>
-              <li>
-                <a href="#">Shop DC</a>
-              </li>
-              <li>
-                <a href="#">Shop DC Collectibles</a>
-              </li>
-            </ul>
+          <div>
+            {/* dc comics menu */}
+            {footerDCComicsMenu.map((item, index) => (
+              <div key={index} className="list-container">
+                <h6>{item.title}</h6>
+                <ul>
+                  {item.links.map((link, index) => (
+                    <li key={index}>
+                      <a href={link.url}>{link.text}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            {/* shop menu */}
+            {footerShopMenu.map((item, index) => (
+              <div key={index} className="list-container mt-3">
+                <h6>{item.title}</h6>
+                <ul>
+                  {item.links.map((link, index) => (
+                    <li key={index}>
+                      <a href={link.url}>{link.text}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-          <div className="list-container">
-            <h6>DC</h6>
-            <ul>
-              <li>
-                <a href="#">Terms Of Use</a>
-              </li>
-              <li>
-                <a href="#">Privacy policy (New)</a>
-              </li>
-              <li>
-                <a href="#">Ad Choices</a>
-              </li>
-              <li>
-                <a href="#">Advertising</a>
-              </li>
-              <li>
-                <a href="#">Jobs</a>
-              </li>
-              <li>
-                <a href="#">Subscriptions</a>
-              </li>
-              <li>
-                <a href="#">Talent Workshops</a>
-              </li>
-              <li>
-                <a href="#">CPSC Certificates</a>
-              </li>
-              <li>
-                <a href="#">Ratings</a>
-              </li>
-              <li>
-                <a href="#">Shop Help</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-          <div className="list-container">
-            <h6>SITES</h6>
-            <ul>
-              <li>
-                <a href="#">DC</a>
-              </li>
-              <li>
-                <a href="#">MAD Magazine</a>
-              </li>
-              <li>
-                <a href="#">DC Kids</a>
-              </li>
-              <li>
-                <a href="#">DC Universe</a>
-              </li>
-              <li>
-                <a href="#">DC Power Visa</a>
-              </li>
-            </ul>
-          </div>
+          {/* dc menu */}
+          {footerDCMenu.map((item, index) => (
+            <div key={index} className="list-container">
+              <h6>{item.title}</h6>
+              <ul>
+                {item.links.map((link, index) => (
+                  <li key={index}>
+                    <a href={link.url}>{link.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          {/* sites menu */}
+          {footerSitesMenu.map((item, index) => (
+            <div key={index} className="list-container">
+              <h6>{item.title}</h6>
+              <ul>
+                {item.links.map((link, index) => (
+                  <li key={index}>
+                    <a href={link.url}>{link.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
           <img
             className="background-logo img-fluid"
             src="public/dc-logo-bg.png"
