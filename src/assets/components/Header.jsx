@@ -1,17 +1,4 @@
-const headerLinks = [
-  { url: "#", text: "CHARACTERS" },
-  { url: "#", text: "COMICS" },
-  { url: "#", text: "MOVIES" },
-  { url: "#", text: "TV" },
-  { url: "#", text: "GAMES" },
-  { url: "#", text: "COLLECTIBLES" },
-  { url: "#", text: "VIDEOS" },
-  { url: "#", text: "FANS" },
-  { url: "#", text: "NEWS" },
-  { url: "#", text: "SHOP" },
-];
-
-export default function Header() {
+export default function Header({ links }) {
   return (
     <header className="page-header">
       <div className="container-custom d-flex justify-content-between h-100">
@@ -20,7 +7,7 @@ export default function Header() {
         </a>
         {/* header nav */}
         <ul className="d-flex align-items-center gap-4 mb-0">
-          {headerLinks.map((link, index) => (
+          {links.map((link, index) => (
             <li key={index}>
               <a href={link.url}>{link.text}</a>
             </li>
