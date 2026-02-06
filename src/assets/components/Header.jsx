@@ -20,8 +20,8 @@ export default function Header() {
         </a>
         {/* header nav */}
         <ul className="d-flex align-items-center gap-4 mb-0">
-          {headerLinks.map((link) => (
-            <li>
+          {headerLinks.map((link, index) => (
+            <li key={index}>
               <a href={link.url}>{link.text}</a>
             </li>
           ))}
