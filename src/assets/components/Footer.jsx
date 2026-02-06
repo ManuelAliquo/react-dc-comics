@@ -52,19 +52,12 @@ const footerSitesMenu = [
   },
 ];
 
-footerSitesMenu.map((item) => {
-  console.log(item.title);
-  item.links.map((link) => {
-    console.log(link.text);
-  });
-});
-
-import Footernav from "./Footernav.jsx";
+import FooterNav from "./FooterNav.jsx";
 
 export default function Footer() {
   return (
     <footer className="page-footer text-white">
-      <Footernav />
+      <FooterNav />
       {/* links section */}
       <section className="footer-links">
         <div className="container-custom d-flex gap-4">
@@ -122,11 +115,7 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-          <img
-            className="background-logo img-fluid"
-            src="public/dc-logo-bg.png"
-            alt="Background Logo"
-          />
+          <img className="background-logo img-fluid" src="/dc-logo-bg.png" alt="Background Logo" />
         </div>
       </section>
       {/* social section */}
