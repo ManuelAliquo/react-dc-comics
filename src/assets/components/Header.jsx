@@ -1,3 +1,16 @@
+const headerLinks = [
+  { url: "#", text: "CHARACTERS" },
+  { url: "#", text: "COMICS" },
+  { url: "#", text: "MOVIES" },
+  { url: "#", text: "TV" },
+  { url: "#", text: "GAMES" },
+  { url: "#", text: "COLLECTIBLES" },
+  { url: "#", text: "VIDEOS" },
+  { url: "#", text: "FANS" },
+  { url: "#", text: "NEWS" },
+  { url: "#", text: "SHOP" },
+];
+
 export default function Header() {
   return (
     <header className="page-header">
@@ -7,36 +20,11 @@ export default function Header() {
         </a>
         {/* header nav */}
         <ul className="d-flex align-items-center gap-4 mb-0">
-          <li>
-            <a href="#">CHARACTERS</a>
-          </li>
-          <li className="active">
-            <a href="#">COMICS</a>
-          </li>
-          <li>
-            <a href="#">MOVIES</a>
-          </li>
-          <li>
-            <a href="#">TV</a>
-          </li>
-          <li>
-            <a href="#">GAMES</a>
-          </li>
-          <li>
-            <a href="#">COLLECTIBLES</a>
-          </li>
-          <li>
-            <a href="#">VIDEOS</a>
-          </li>
-          <li>
-            <a href="#">FANS</a>
-          </li>
-          <li>
-            <a href="#">NEWS</a>
-          </li>
-          <li>
-            <a href="#">SHOP</a>
-          </li>
+          {headerLinks.map((link) => (
+            <li>
+              <a href={link.url}>{link.text}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </header>
