@@ -1,6 +1,6 @@
 import ComicList from "./Comics/ComicList";
 
-export default function Main() {
+export default function Main({ comics }) {
   return (
     <main className="text-white">
       <div className="jumbo-section">
@@ -8,7 +8,8 @@ export default function Main() {
       </div>
       {/* comics section */}
       <section className="container-custom comics-section">
-        <ComicList />
+        {/* prop drilling? */}
+        <ComicList comics={comics} />
       </section>
     </main>
   );
