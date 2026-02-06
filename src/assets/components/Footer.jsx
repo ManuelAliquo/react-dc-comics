@@ -1,69 +1,16 @@
-const footerDCComicsMenu = [
-  {
-    title: "DC COMICS",
-    links: [
-      { text: "Characters", url: "#" },
-      { text: "Comics", url: "#" },
-      { text: "Movies", url: "#" },
-      { text: "TV", url: "#" },
-      { text: "Games", url: "#" },
-      { text: "Videos", url: "#" },
-      { text: "News", url: "#" },
-    ],
-  },
-];
-const footerShopMenu = [
-  {
-    title: "SHOP",
-    links: [
-      { text: "Shop DC", url: "#" },
-      { text: "Shop DC Collectibles", url: "#" },
-    ],
-  },
-];
-const footerDCMenu = [
-  {
-    title: "DC",
-    links: [
-      { text: "Terms Of Use", url: "#" },
-      { text: "Privacy policy (New)", url: "#" },
-      { text: "Ad Choices", url: "#" },
-      { text: "Advertising", url: "#" },
-      { text: "Jobs", url: "#" },
-      { text: "Subscriptions", url: "#" },
-      { text: "Talent Workshops", url: "#" },
-      { text: "CPSC Certificates", url: "#" },
-      { text: "Ratings", url: "#" },
-      { text: "Shop Help", url: "#" },
-      { text: "Contact Us", url: "#" },
-    ],
-  },
-];
-const footerSitesMenu = [
-  {
-    title: "SITES",
-    links: [
-      { text: "DC", url: "#" },
-      { text: "MAD Magazine", url: "#" },
-      { text: "DC Kids", url: "#" },
-      { text: "DC Universe", url: "#" },
-      { text: "DC Power Visa", url: "#" },
-    ],
-  },
-];
-
 import FooterNav from "./FooterNav.jsx";
 
-export default function Footer() {
+export default function Footer({ items, dccomicslinks, shoplinks, dclinks, siteslinks }) {
   return (
     <footer className="page-footer text-white">
-      <FooterNav />
+      {/* prop drilling? */}
+      <FooterNav items={items} />
       {/* links section */}
       <section className="footer-links">
         <div className="container-custom d-flex gap-4">
           <div>
             {/* dc comics menu */}
-            {footerDCComicsMenu.map((item, index) => (
+            {dccomicslinks.map((item, index) => (
               <div key={index} className="list-container">
                 <h6>{item.title}</h6>
                 <ul>
@@ -76,7 +23,7 @@ export default function Footer() {
               </div>
             ))}
             {/* shop menu */}
-            {footerShopMenu.map((item, index) => (
+            {shoplinks.map((item, index) => (
               <div key={index} className="list-container mt-3">
                 <h6>{item.title}</h6>
                 <ul>
@@ -90,7 +37,7 @@ export default function Footer() {
             ))}
           </div>
           {/* dc menu */}
-          {footerDCMenu.map((item, index) => (
+          {dclinks.map((item, index) => (
             <div key={index} className="list-container">
               <h6>{item.title}</h6>
               <ul>
@@ -103,7 +50,7 @@ export default function Footer() {
             </div>
           ))}
           {/* sites menu */}
-          {footerSitesMenu.map((item, index) => (
+          {siteslinks.map((item, index) => (
             <div key={index} className="list-container">
               <h6>{item.title}</h6>
               <ul>

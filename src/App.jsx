@@ -193,12 +193,87 @@ const comicsList = [
   },
 ];
 
+// footer nav items
+const footerNavItems = [
+  { id: 1, url: "#", src: "src/assets/img/buy-comics-digital-comics.png", title: "DIGITAL COMICS" },
+  { id: 2, url: "#", src: "src/assets/img/buy-comics-merchandise.png", title: "DC MERCHANDISE" },
+  { id: 3, url: "#", src: "src/assets/img/buy-comics-subscriptions.png", title: "SUBSCRIPTION" },
+  {
+    id: 4,
+    url: "#",
+    src: "src/assets/img/buy-comics-shop-locator.png",
+    title: "COMIC SHOP LOCATOR",
+  },
+  { id: 5, url: "#", src: "src/assets/img/buy-dc-power-visa.svg", title: "DC POWER VISA" },
+];
+
+// footer links
+const footerDCComicsMenu = [
+  {
+    title: "DC COMICS",
+    links: [
+      { text: "Characters", url: "#" },
+      { text: "Comics", url: "#" },
+      { text: "Movies", url: "#" },
+      { text: "TV", url: "#" },
+      { text: "Games", url: "#" },
+      { text: "Videos", url: "#" },
+      { text: "News", url: "#" },
+    ],
+  },
+];
+const footerShopMenu = [
+  {
+    title: "SHOP",
+    links: [
+      { text: "Shop DC", url: "#" },
+      { text: "Shop DC Collectibles", url: "#" },
+    ],
+  },
+];
+const footerDCMenu = [
+  {
+    title: "DC",
+    links: [
+      { text: "Terms Of Use", url: "#" },
+      { text: "Privacy policy (New)", url: "#" },
+      { text: "Ad Choices", url: "#" },
+      { text: "Advertising", url: "#" },
+      { text: "Jobs", url: "#" },
+      { text: "Subscriptions", url: "#" },
+      { text: "Talent Workshops", url: "#" },
+      { text: "CPSC Certificates", url: "#" },
+      { text: "Ratings", url: "#" },
+      { text: "Shop Help", url: "#" },
+      { text: "Contact Us", url: "#" },
+    ],
+  },
+];
+const footerSitesMenu = [
+  {
+    title: "SITES",
+    links: [
+      { text: "DC", url: "#" },
+      { text: "MAD Magazine", url: "#" },
+      { text: "DC Kids", url: "#" },
+      { text: "DC Universe", url: "#" },
+      { text: "DC Power Visa", url: "#" },
+    ],
+  },
+];
+
 export default function App() {
   return (
     <>
       <Header links={headerLinks} />
       <Main comics={comicsList} />
-      <Footer />
+      <Footer
+        items={footerNavItems}
+        dccomicslinks={footerDCComicsMenu}
+        shoplinks={footerShopMenu}
+        dclinks={footerDCMenu}
+        siteslinks={footerSitesMenu}
+      />
     </>
   );
 }
